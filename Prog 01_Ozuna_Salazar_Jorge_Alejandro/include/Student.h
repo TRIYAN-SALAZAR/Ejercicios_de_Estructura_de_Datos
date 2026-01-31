@@ -14,9 +14,9 @@ class Student
         ~Student();
 
         void showStudentData();
-        void setUpdateAverageGrade(int);
+        void setUpdateAverageGrade(float);
         void setUpdateName(std::string);
-        
+
         bool doesTheStudenPass();
         bool isTheStudenoutstanding();
 };

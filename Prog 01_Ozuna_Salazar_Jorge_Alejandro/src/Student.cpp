@@ -14,7 +14,7 @@ void Student::showStudentData() {
     std::cout << "Average Grade: " << this->averageGrade << std::endl;
 }
 
-void Student::setUpdateAverageGrade(int average) {
+void Student::setUpdateAverageGrade(float average) {
     this->averageGrade = average;
 }
 
