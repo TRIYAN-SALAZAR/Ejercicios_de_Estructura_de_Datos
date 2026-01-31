@@ -1,0 +1,46 @@
+# Build output
+build/
+build-*/
+bin/
+lib/
+out/
+dist/
+
+# Object and intermediate files
+*.o
+*.obj
+*.lo
+*.slo
+
+# Static and import libraries
+*.a
+*.la
+*.lib
+
+# Shared libraries
+*.so
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+
+# CLion/JetBrains
+.idea/
+cmake-build-*/
+
+# Logs and cache
+*.log
+.cache/
+tmp/
+*.tmp
