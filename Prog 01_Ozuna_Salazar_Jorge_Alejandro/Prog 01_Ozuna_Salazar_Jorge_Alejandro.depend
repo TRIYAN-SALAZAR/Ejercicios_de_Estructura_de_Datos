@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1769829607 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 01_ozuna_salazar_jorge_alejandro\src\course.cpp
+	"Course.h"
+	<iostream>
+
+1769829565 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 01_ozuna_salazar_jorge_alejandro\include\course.h
+	<iostream>
+
+1769831216 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 01_ozuna_salazar_jorge_alejandro\src\student.cpp
+	"Student.h"
+	<iostream>
+
+1769831225 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 01_ozuna_salazar_jorge_alejandro\include\student.h
+	<iostream>
+
