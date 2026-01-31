@@ -1,16 +1,22 @@
 #ifndef COURSE_H
 #define COURSE_H
-
+#include <iostream>
 
 class Course
 {
     public:
-        Course();
+        std::string name;
+        int code;
+        int credits;
+
+        Course(std::string, int, int);
         ~Course();
 
-    protected:
+        void showCourseName();
+        void setCredits(int);
+        int getCredits();
+        void setChangeName(std::string);
 
-    private:
 };
 
 #endif // COURSE_H
