@@ -43,4 +43,5 @@ cmake-build-*/
 *.log
 .cache/
 tmp/
-*.tmp
+*.tmpy
+*.zip
