@@ -1,7 +1,9 @@
 #include "Student.h"
 #include <iostream>
 
-Student::Student(std::string name, int studenID, float averageGrade) : name(name), ID(studenID) {}
+Student::Student(std::string name, int studenID) : name(name), ID(studenID) {
+    this->averageGrade = 0.0f;
+}
 Student::Student(std::string name, int studenID, float averageGrade) : name(name), ID(studenID), averageGrade(averageGrade) {}
 
 Student::~Student() {}
