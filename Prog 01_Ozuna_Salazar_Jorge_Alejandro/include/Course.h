@@ -12,7 +12,7 @@ class Course
         Course(std::string, int, int);
         ~Course();
 
-        void showCourseName();
+        void showCourseInformation();
         void setCredits(int);
         int getCredits();
         void setChangeName(std::string);

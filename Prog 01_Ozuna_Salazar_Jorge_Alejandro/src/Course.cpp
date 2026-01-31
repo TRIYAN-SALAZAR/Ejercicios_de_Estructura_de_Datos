@@ -9,8 +9,10 @@ Course::~Course()
 }
 
 
-void Course::showCourseName() {
-    std::cout << "Course: " << this->name << std::endl;
+void Course::showCourseInformation() {
+    std::cout << "Name Course: " << this->name << std::endl;
+    std::cout << "Code Course: " << this->code << std::endl;
+    std::cout << "Credits of Course: " << this->credits << std::endl;
 }
 
 void Course::setCredits(int credits) {
