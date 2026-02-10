@@ -67,14 +67,14 @@ void SimpleList::eliminar(int element) {
     }
     
     Node *aux = head;
-    Node *auxDeleyed = nullptr;
+    Node *auxPrevious = nullptr;
     bool band = true;
 
     while(aux and band) {
         if(aux->data == element)
             band = false;
         else {
-            auxDeleyed = aux;
+            auxPrevious = aux;
             aux = aux->next; 
         }
     }
@@ -88,10 +88,10 @@ void SimpleList::eliminar(int element) {
         head = head->next;
         delete aux;
     } else if(aux->next==nullptr) {
-        auxDeleyed->next = nullptr;
+        auxPrevious->next = nullptr;
         delete aux;
     } else {
-        auxDeleyed->next = aux->next;
+        auxPrevious->next = aux->next;
         delete aux;
     }
 }
