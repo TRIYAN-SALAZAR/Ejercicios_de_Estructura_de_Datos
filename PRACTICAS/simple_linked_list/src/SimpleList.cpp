@@ -61,8 +61,10 @@ void SimpleList::insertarFinal(int elem) {
 }
 
 void SimpleList::eliminar(int element) {
-    if(head==nullptr)
+    if(head==nullptr) {
         cout << "La Lista esta vacia" << endl;
+        return;
+    }
     
     Node *aux = head;
     Node *auxDeleyed = nullptr;
