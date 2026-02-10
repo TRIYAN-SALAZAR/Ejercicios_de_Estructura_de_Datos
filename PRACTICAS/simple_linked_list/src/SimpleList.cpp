@@ -79,6 +79,11 @@ void SimpleList::eliminar(int element) {
         }
     }
 
+    if(aux == nullptr) {
+        cout << "Elemento " << element << " no encontrado" << endl;
+        return;
+    }
+
     if(aux==head) {
         head = head->next;
         delete aux;
