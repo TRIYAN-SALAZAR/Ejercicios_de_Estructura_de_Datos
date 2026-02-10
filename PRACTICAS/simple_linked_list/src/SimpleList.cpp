@@ -7,6 +7,26 @@ using std::endl;
 SimpleList::SimpleList() : head(nullptr) {}
 SimpleList::SimpleList(Node *h) : head(h) {}
 
+SimpleList::~SimpleList() {
+    while(!is_empty())
+        remove_front();
+
+    cout << endl;
+    cout << "Lista simplemente enlazada de strings eliminada con exito" << std::endl;
+    cout << endl;
+}
+
+bool SimpleList::is_empty() const {
+    return head == nullptr;
+}
+
+void SimpleList::remove_front() {
+    Node *old = head;
+    head = old->next;
+    cout << "Elemento eliminado: " << (old->data) << endl;
+    delete old;
+}
+
 void SimpleList::mostrarTodo() {
     Node *aux = head;
     while(aux) {

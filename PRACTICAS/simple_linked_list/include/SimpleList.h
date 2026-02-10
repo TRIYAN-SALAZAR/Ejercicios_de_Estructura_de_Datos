@@ -9,11 +9,14 @@ class SimpleList
         Node *head;
         SimpleList();
         SimpleList(Node*);
+        ~SimpleList();
 
         void mostrarTodo();
         void insertarInicio(int);
         void insertarFinal(int);
         void eliminar(int);
+        bool is_empty() const;
+        void remove_front(); //Para asegurar que los nodos son eliminados correctamente
 };
 
 #endif // SIMPLELIST_H
