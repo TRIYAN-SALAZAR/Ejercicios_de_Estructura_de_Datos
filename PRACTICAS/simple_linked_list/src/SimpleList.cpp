@@ -47,15 +47,16 @@ void SimpleList::insertarInicio(int elem) {
 
 void SimpleList::insertarFinal(int elem) {
     Node *temp = new Node(elem);
-    Node *aux = head;
-
+    
     if(head == nullptr) {
         head = temp;
     } else {
+        Node *aux = head;
+
         while(aux->next!=nullptr) {
             aux = aux->next;
-            aux->next = temp;
         }
+        aux->next = temp;
     }
 }
 
