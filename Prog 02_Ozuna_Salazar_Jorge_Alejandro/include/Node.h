@@ -5,12 +5,12 @@
 class Node
 {
     public:
+        int data;
+        Node *next;
         Node();
+        Node(int);
+        Node(int, Node*);
         virtual ~Node();
-
-    protected:
-
-    private:
 };
 
 #endif // NODE_H
