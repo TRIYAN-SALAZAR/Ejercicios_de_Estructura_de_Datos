@@ -45,3 +45,6 @@ cmake-build-*/
 tmp/
 *.tmpy
 *.zip
+
+# Personal files
+Listas/
