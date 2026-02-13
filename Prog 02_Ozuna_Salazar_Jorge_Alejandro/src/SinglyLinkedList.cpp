@@ -17,3 +17,17 @@ void SinglyLinkedList::insert_at_the_beggining(int data) {
         head = temp;
     }
 }
+
+void SinglyLinkedList::insert_at_the_end(int data) {
+    Node *temp = new Node(data);
+
+    if(!head)
+        head = temp;
+    else {
+        Node *aux = head;
+        while(aux->next != nullptr)
+            aux = aux->next;
+
+        aux->next = temp;
+    }
+}
