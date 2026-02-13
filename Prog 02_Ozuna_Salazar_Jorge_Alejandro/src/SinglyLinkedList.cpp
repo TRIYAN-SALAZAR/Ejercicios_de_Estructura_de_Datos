@@ -1,4 +1,8 @@
 #include "SinglyLinkedList.h"
+#include <iostream>
+
+using std::cout;
+using std::endl;
 
 SinglyLinkedList::SinglyLinkedList() : head(nullptr) {}
 SinglyLinkedList::SinglyLinkedList(Node *node) : head(nullptr) {}
@@ -30,4 +34,32 @@ void SinglyLinkedList::insert_at_the_end(int data) {
 
         aux->next = temp;
     }
+}
+
+void SinglyLinkedList::insert_in_a_position(int data, int value_position_data) {
+
+    if(head == nullptr) {
+        cout << "Lista vacía. Insertando al inicio." << endl;
+        insert_at_the_beggining(data);
+        return;
+    } else if(head->data == value_position_data) {
+        insert_at_the_beggining(data);
+        return;
+    }
+
+    Node *aux = head;
+    while(aux != nullptr && aux->data != value_position_data) {
+        aux = aux->next;
+    }
+
+    if(aux == nullptr) {
+        cout << "Valor " << value_position_data << " no encontrado" << endl;
+        return;
+    }
+
+    Node *temp = new Node(data);
+    temp->next = aux->next;
+    aux->next = temp;
+    
+    cout << "Elemento " << data << " insertado después de " << value_position_data << endl;
 }
