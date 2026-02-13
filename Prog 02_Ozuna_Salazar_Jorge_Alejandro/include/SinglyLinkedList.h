@@ -13,7 +13,7 @@ class SinglyLinkedList
 
         void insert_at_the_beggining(int);
         void insert_at_the_end(int);
-        void insert_in_a_position(int);
+        void insert_in_a_position(int, int);
 
         void search(int);
         void delete_one(int);
