@@ -1,11 +1,9 @@
 #include "SinglyLinkedList.h"
 
-SinglyLinkedList::SinglyLinkedList()
-{
-    //ctor
-}
+SinglyLinkedList::SinglyLinkedList() : head(nullptr) {}
+SinglyLinkedList::SinglyLinkedList(Node *node) : head(nullptr) {}
 
-SinglyLinkedList::~SinglyLinkedList()
-{
-    //dtor
+SinglyLinkedList::~SinglyLinkedList() {
+    if(!is_emty())
+        delete_all();
 }
