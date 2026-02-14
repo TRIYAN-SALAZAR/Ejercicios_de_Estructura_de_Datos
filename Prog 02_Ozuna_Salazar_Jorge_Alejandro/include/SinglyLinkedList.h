@@ -7,7 +7,10 @@ class SinglyLinkedList
 {
     public:
         Node *head;
-        int total_nodes;
+        Node *tail;
+        Node *current_position;
+        int total_nodes = 0;
+
         SinglyLinkedList();
         SinglyLinkedList(Node*);
         virtual ~SinglyLinkedList();
