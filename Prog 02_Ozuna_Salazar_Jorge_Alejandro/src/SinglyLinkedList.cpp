@@ -111,3 +111,7 @@ void SinglyLinkedList::delete_all() {
 
     head = nullptr;
 }
+
+int SinglyLinkedList::size() {
+    return total_nodes;
+}

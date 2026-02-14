@@ -25,7 +25,7 @@ class SinglyLinkedList
         void last();
         void previous_node();
         void next_node();
-        void size();
+        int size();
 };
 
 #endif // SINGLYLINKEDLIST_H
