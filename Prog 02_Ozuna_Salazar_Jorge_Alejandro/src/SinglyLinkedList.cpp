@@ -8,7 +8,7 @@ SinglyLinkedList::SinglyLinkedList() : head(nullptr) {}
 SinglyLinkedList::SinglyLinkedList(Node *node) : head(nullptr) {}
 
 SinglyLinkedList::~SinglyLinkedList() {
-    if(!is_emty())
+    if(!is_empty())
         delete_all();
 }
 
@@ -114,4 +114,9 @@ void SinglyLinkedList::delete_all() {
 
 int SinglyLinkedList::size() {
     return total_nodes;
+}
+
+bool SinglyLinkedList::is_empty() {
+    if(head == nullptr) return true;
+    return false;
 }

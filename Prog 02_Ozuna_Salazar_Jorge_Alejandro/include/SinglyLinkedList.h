@@ -20,7 +20,7 @@ class SinglyLinkedList
         void delete_one(int);
         void delete_all();
 
-        bool is_emty();
+        bool is_empty();
         void first();
         void last();
         void previous_node();
