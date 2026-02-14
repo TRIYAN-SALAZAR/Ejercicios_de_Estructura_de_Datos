@@ -104,6 +104,8 @@ void SinglyLinkedList::delete_one(int data) {
         auxPrevious->next = aux->next;
         delete aux;
     }
+
+    total_nodes--;
 }
 
 void SinglyLinkedList::delete_all() {
@@ -116,6 +118,7 @@ void SinglyLinkedList::delete_all() {
     }
 
     head = nullptr;
+    total_nodes = 0;
 }
 
 int SinglyLinkedList::size() {
