@@ -20,6 +20,8 @@ void SinglyLinkedList::insert_at_the_beggining(int data) {
     } else {
         head = temp;
     }
+    
+    total_nodes++;
 }
 
 void SinglyLinkedList::insert_at_the_end(int data) {
@@ -34,6 +36,8 @@ void SinglyLinkedList::insert_at_the_end(int data) {
 
         aux->next = temp;
     }
+
+    total_nodes++;
 }
 
 void SinglyLinkedList::insert_in_a_position(int data, int value_position_data) {
@@ -60,6 +64,8 @@ void SinglyLinkedList::insert_in_a_position(int data, int value_position_data) {
     Node *temp = new Node(data);
     temp->next = aux->next;
     aux->next = temp;
+
+    total_nodes++;
     
     cout << "Elemento " << data << " insertado después de " << value_position_data << endl;
 }
