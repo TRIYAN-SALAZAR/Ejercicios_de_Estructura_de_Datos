@@ -99,3 +99,15 @@ void SinglyLinkedList::delete_one(int data) {
         delete aux;
     }
 }
+
+void SinglyLinkedList::delete_all() {
+    Node *aux = head;
+    Node *temp;
+    while(aux != nullptr) {
+        temp = aux->next;
+        delete aux;
+        aux = temp;
+    }
+
+    head = nullptr;
+}
