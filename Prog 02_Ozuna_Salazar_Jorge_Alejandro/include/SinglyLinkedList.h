@@ -7,6 +7,7 @@ class SinglyLinkedList
 {
     public:
         Node *head;
+        int total_nodes;
         SinglyLinkedList();
         SinglyLinkedList(Node*);
         virtual ~SinglyLinkedList();

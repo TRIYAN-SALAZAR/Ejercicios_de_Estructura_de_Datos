@@ -63,3 +63,39 @@ void SinglyLinkedList::insert_in_a_position(int data, int value_position_data) {
     
     cout << "Elemento " << data << " insertado después de " << value_position_data << endl;
 }
+
+void SinglyLinkedList::delete_one(int data) {
+    if(head==nullptr) {
+        cout << "La Lista esta vacia" << endl;
+        return;
+    }
+    
+    Node *aux = head;
+    Node *auxPrevious = nullptr;
+    bool band = true;
+
+    while(aux and band) {
+        if(aux->data == data)
+            band = false;
+        else {
+            auxPrevious = aux;
+            aux = aux->next; 
+        }
+    }
+
+    if(aux == nullptr) {
+        cout << "Elemento " << data << " no encontrado" << endl;
+        return;
+    }
+
+    if(aux==head) {
+        head = head->next;
+        delete aux;
+    } else if(aux->next==nullptr) {
+        auxPrevious->next = nullptr;
+        delete aux;
+    } else {
+        auxPrevious->next = aux->next;
+        delete aux;
+    }
+}
