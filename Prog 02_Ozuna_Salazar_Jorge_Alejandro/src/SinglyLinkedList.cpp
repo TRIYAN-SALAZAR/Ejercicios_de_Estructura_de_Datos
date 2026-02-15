@@ -214,3 +214,12 @@ Node* SinglyLinkedList::previous_node() {
 
     return previous;
 }
+
+Node* SinglyLinkedList::get_current() {
+    if(current_position == nullptr) {
+        cout << "Posicion actual no definida" << endl;
+        return nullptr;
+    }
+
+    return current_position;
+}
