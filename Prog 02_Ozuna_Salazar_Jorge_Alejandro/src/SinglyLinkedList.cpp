@@ -204,7 +204,7 @@ Node* SinglyLinkedList::next_node() {
 }
 
 Node* SinglyLinkedList::previous_node() {
-    if(current_position = nullptr) {
+    if(current_position == nullptr) {
         cout << "Posicion actual no definida. Use first() o last()" << endl;
         return nullptr;
     }
