@@ -106,6 +106,11 @@ void SinglyLinkedList::delete_one(int data) {
     }
 
     total_nodes--;
+
+    if(aux == current_position) {
+        current_position = nullptr;
+        previous = nullptr;
+    }
 }
 
 void SinglyLinkedList::delete_all() {
