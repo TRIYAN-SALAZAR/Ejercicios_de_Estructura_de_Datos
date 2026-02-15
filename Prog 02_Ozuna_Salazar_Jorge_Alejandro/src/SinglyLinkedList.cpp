@@ -226,8 +226,6 @@ Node* SinglyLinkedList::get_current() {
     return current_position;
 }
 
-
-
 void SinglyLinkedList::reset_current() {
     current_position = head;
     previous = nullptr;
