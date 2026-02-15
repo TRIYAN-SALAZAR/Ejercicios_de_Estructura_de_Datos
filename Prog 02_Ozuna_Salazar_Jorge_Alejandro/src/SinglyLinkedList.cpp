@@ -169,6 +169,7 @@ Node* SinglyLinkedList::first() {
         return nullptr;
     
     current_position = head;
+    previous = nullptr;
     return current_position;
 }
 
