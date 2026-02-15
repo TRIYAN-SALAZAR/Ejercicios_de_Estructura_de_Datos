@@ -198,6 +198,11 @@ Node* SinglyLinkedList::next_node() {
         return nullptr;
     }
 
+    if(current_position->next == nullptr) {
+        cout << "Ya esta en el ultimo nodo" << endl;
+        return nullptr;
+    }
+
     previous = current_position;
     current_position = current_position->next;
     return current_position;
