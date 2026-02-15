@@ -15,7 +15,7 @@ SinglyLinkedList::~SinglyLinkedList() {
 void SinglyLinkedList::insert_at_the_beggining(int data) {
     Node *temp = new Node(data);
     temp->next = head;
-    
+
     head = temp;
     total_nodes++;
 }
@@ -92,15 +92,11 @@ void SinglyLinkedList::delete_one(int data) {
 
     if(aux==head) {
         head = head->next;
-        delete aux;
-    } else if(aux->next==nullptr) {
-        auxPrevious->next = nullptr;
-        delete aux;
     } else {
         auxPrevious->next = aux->next;
-        delete aux;
     }
 
+    delete aux;
     total_nodes--;
 
     if(aux == current_position) {
@@ -218,6 +214,18 @@ Node* SinglyLinkedList::previous_node() {
     if(current_position == head) {
         cout << "Ya esta en el primer nodo" << endl;
         return nullptr;
+    }
+
+    current_position = previous;
+    
+    if(current_position == head) {
+        previous = nullptr;
+    } else {
+        Node *aux = head;
+        while(aux->next != current_position) {
+            aux = aux->next;
+        }
+        previous = aux;
     }
 
     return previous;
