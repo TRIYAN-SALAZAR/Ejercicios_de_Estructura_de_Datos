@@ -179,8 +179,12 @@ Node* SinglyLinkedList::last() {
     }
 
     Node *aux = head;
-    while(aux->next != nullptr) 
+    previous = nullptr;
+    
+    while(aux->next != nullptr) {
+        previous = aux;
         aux = aux->next;
+    }
     
     current_position = aux;
     return current_position;
