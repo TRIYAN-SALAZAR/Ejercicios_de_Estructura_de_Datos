@@ -35,11 +35,9 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Node.h" />
-		<Unit filename="include/Nodo.h" />
 		<Unit filename="include/SinglyLinkedList.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Node.cpp" />
-		<Unit filename="src/Nodo.cpp" />
 		<Unit filename="src/SinglyLinkedList.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
