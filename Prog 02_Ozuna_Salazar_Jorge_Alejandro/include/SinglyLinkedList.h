@@ -23,6 +23,8 @@ class SinglyLinkedList
         void delete_one(int);
         void delete_all();
 
+        void show_all();
+
         bool is_empty();
         void first();
         void last();

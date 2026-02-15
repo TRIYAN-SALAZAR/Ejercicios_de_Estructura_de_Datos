@@ -129,3 +129,18 @@ bool SinglyLinkedList::is_empty() {
     if(head == nullptr) return true;
     return false;
 }
+
+void SinglyLinkedList::show_all() {
+    Node *aux = head;
+
+    if(aux == nullptr) {
+        cout << "La lista esta vacia" << endl;
+        return;
+    }
+
+    while(aux->next != nullptr) {
+        cout << aux->data << "->";
+        aux = aux->next;
+    }
+    cout << aux->data;
+}
