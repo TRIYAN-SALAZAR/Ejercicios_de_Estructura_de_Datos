@@ -89,6 +89,13 @@ void SinglyLinkedList::delete_one(int data) {
         cout << "Elemento " << data << " no encontrado" << endl;
         return;
     }
+    
+    if(aux == current_position) {
+        current_position = nullptr;
+        previous = nullptr;
+    } else if(aux == previous) {
+        previous = nullptr;
+    }
 
     if(aux==head) {
         head = head->next;
@@ -98,11 +105,6 @@ void SinglyLinkedList::delete_one(int data) {
 
     delete aux;
     total_nodes--;
-
-    if(aux == current_position) {
-        current_position = nullptr;
-        previous = nullptr;
-    }
 }
 
 void SinglyLinkedList::delete_all() {
