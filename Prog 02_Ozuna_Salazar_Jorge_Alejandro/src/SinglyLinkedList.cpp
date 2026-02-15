@@ -230,7 +230,7 @@ Node* SinglyLinkedList::previous_node() {
         previous = aux;
     }
 
-    return previous;
+    return current_position;
 }
 
 Node* SinglyLinkedList::get_current() {
