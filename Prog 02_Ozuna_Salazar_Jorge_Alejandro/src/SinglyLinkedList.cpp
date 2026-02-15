@@ -185,6 +185,19 @@ Node* SinglyLinkedList::last() {
     return current_position;
 }
 
-Node* SinglyLinkedList::next_node() {}
+Node* SinglyLinkedList::next_node() {
+    if(current_position = nullptr) {
+        cout << "Posicion actual no definida. Use first() o last()" << endl;
+        return nullptr;
+    }
+
+    if(head == nullptr) {
+        cout << "Lista vacia" << endl;
+        return nullptr;
+    }
+
+    current_position = current_position->next;
+    return current_position;
+}
 
 Node* SinglyLinkedList::previous_node() {}
