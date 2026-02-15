@@ -6,9 +6,10 @@
 class SinglyLinkedList
 {
     public:
-        Node *head = nullptr;
-        Node *current_position = nullptr;
-        int total_nodes = 0;
+        Node *head;
+        Node *previous;
+        Node *current_position;
+        int total_nodes;
 
         SinglyLinkedList();
         SinglyLinkedList(Node*);

@@ -4,8 +4,8 @@
 using std::cout;
 using std::endl;
 
-SinglyLinkedList::SinglyLinkedList() : head(nullptr) {}
-SinglyLinkedList::SinglyLinkedList(Node *node) : head(nullptr) {}
+SinglyLinkedList::SinglyLinkedList() : head(nullptr), current_position(nullptr), previous(nullptr), total_nodes(0) {}
+SinglyLinkedList::SinglyLinkedList(Node *node) : head(nullptr), current_position(nullptr), previous(nullptr), total_nodes(0) {}
 
 SinglyLinkedList::~SinglyLinkedList() {
     if(!is_empty())
