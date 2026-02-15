@@ -118,6 +118,8 @@ void SinglyLinkedList::delete_all() {
     }
 
     head = nullptr;
+    current_position = nullptr;
+    previous = nullptr;
     total_nodes = 0;
 }
 
