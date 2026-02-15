@@ -7,7 +7,6 @@ class SinglyLinkedList
 {
     public:
         Node *head;
-        Node *tail;
         Node *current_position;
         int total_nodes = 0;
 
