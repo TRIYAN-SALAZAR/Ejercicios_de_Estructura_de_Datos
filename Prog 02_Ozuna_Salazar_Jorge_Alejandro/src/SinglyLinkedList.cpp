@@ -171,7 +171,19 @@ Node* SinglyLinkedList::first() {
     return current_position;
 }
 
-Node* SinglyLinkedList::last() {}
+Node* SinglyLinkedList::last() {
+    if(head == nullptr) {
+        cout << "Lista vacia" << endl;
+        return nullptr;
+    }
+
+    Node *aux = head;
+    while(aux->next != nullptr) 
+        aux = aux->next;
+    
+    current_position = aux;
+    return current_position;
+}
 
 Node* SinglyLinkedList::next_node() {}
 
