@@ -30,6 +30,8 @@ class SinglyLinkedList
         Node* last();
         Node* previous_node();
         Node* next_node();
+        Node* get_current();
+        void reset_current();
         int size();
 };
 
