@@ -26,10 +26,10 @@ class SinglyLinkedList
         void show_all();
 
         bool is_empty();
-        void first();
-        void last();
-        void previous_node();
-        void next_node();
+        Node* first();
+        Node* last();
+        Node* previous_node();
+        Node* next_node();
         int size();
 };
 

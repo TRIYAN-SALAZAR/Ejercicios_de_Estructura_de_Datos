@@ -162,3 +162,11 @@ void SinglyLinkedList::search(int data) {
     else
         cout << "Valor " << data << " encontrado" << endl;
 }
+
+Node* SinglyLinkedList::first() {}
+
+Node* SinglyLinkedList::last() {}
+
+Node* SinglyLinkedList::next_node() {}
+
+Node* SinglyLinkedList::previous_node() {}
