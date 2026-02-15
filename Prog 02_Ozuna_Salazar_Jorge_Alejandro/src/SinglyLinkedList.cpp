@@ -224,7 +224,7 @@ Node* SinglyLinkedList::previous_node() {
         previous = nullptr;
     } else {
         Node *aux = head;
-        while(aux->next != current_position) {
+        while(aux != nullptr and aux->next != current_position) {
             aux = aux->next;
         }
         previous = aux;
