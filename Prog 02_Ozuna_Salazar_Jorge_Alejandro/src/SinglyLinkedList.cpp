@@ -144,3 +144,21 @@ void SinglyLinkedList::show_all() {
     }
     cout << aux->data;
 }
+
+void SinglyLinkedList::search(int data) {
+    
+    if(head == nullptr) {
+        cout << "No hay datos, Lista vacia" << endl;
+        return;
+    }
+    
+    Node *aux = head;
+    while(aux != nullptr and aux->data != data) {
+        aux = aux->next;
+    }
+
+    if(aux == nullptr)
+        cout << "Valor " << data << " no existente" << endl;
+    else
+        cout << "Valor " << data << " encontrado" << endl;
+}
