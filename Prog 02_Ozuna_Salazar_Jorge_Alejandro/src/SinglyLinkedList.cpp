@@ -196,8 +196,21 @@ Node* SinglyLinkedList::next_node() {
         return nullptr;
     }
 
+    previous = current_position;
     current_position = current_position->next;
     return current_position;
 }
 
-Node* SinglyLinkedList::previous_node() {}
+Node* SinglyLinkedList::previous_node() {
+    if(current_position = nullptr) {
+        cout << "Posicion actual no definida. Use first() o last()" << endl;
+        return nullptr;
+    }
+
+    if(current_position == head) {
+        cout << "Ya esta en el primer nodo" << endl;
+        return nullptr;
+    }
+
+    return previous;
+}
