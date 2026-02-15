@@ -6,8 +6,8 @@
 class SinglyLinkedList
 {
     public:
-        Node *head;
-        Node *current_position;
+        Node *head = nullptr;
+        Node *current_position = nullptr;
         int total_nodes = 0;
 
         SinglyLinkedList();
