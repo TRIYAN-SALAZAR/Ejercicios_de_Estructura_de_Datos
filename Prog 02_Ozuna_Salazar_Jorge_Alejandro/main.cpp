@@ -1,10 +1,15 @@
 #include <iostream>
 #include <limits>
 #include "SinglyLinkedList.h"
+#include <cstdlib>
 
 using std::cin;
 using std::cout;
 using std::endl;
+
+void limpiar_pantalla() {
+    system("cls");
+}
 
 int leer_entero(const char* mensaje) {
     int valor;
@@ -54,6 +59,7 @@ int main() {
     int opcion, valor, referencia;
 
     do {
+        limpiar_pantalla();
         mostrar_menu();
         opcion = leer_opcion();
 
