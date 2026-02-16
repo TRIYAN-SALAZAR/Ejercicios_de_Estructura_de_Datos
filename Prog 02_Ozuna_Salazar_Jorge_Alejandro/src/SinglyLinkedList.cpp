@@ -139,11 +139,13 @@ void SinglyLinkedList::show_all() {
         return;
     }
 
-    while(aux->next != nullptr) {
-        cout << aux->data << "->";
+    cout << "[";
+    while(aux != nullptr) {
+        cout << aux->data;
+        if (aux->next != nullptr) cout << " -> ";
         aux = aux->next;
     }
-    cout << aux->data;
+    cout << "]";
 }
 
 void SinglyLinkedList::search(int data) {
