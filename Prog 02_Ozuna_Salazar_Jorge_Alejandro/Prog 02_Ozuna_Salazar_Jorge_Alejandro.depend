@@ -3,7 +3,7 @@
 	<iostream>
 	<SinglyLinkedList.h>
 
-1771099300 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_ozuna_salazar_jorge_alejandro\include\singlylinkedlist.h
+1771195074 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_ozuna_salazar_jorge_alejandro\include\singlylinkedlist.h
 	<Node.h>
 
 1770939564 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_ozuna_salazar_jorge_alejandro\include\node.h
@@ -11,7 +11,7 @@
 1770939703 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_ozuna_salazar_jorge_alejandro\src\node.cpp
 	"Node.h"
 
-1771099954 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_ozuna_salazar_jorge_alejandro\src\singlylinkedlist.cpp
+1771221023 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_ozuna_salazar_jorge_alejandro\src\singlylinkedlist.cpp
 	"SinglyLinkedList.h"
 	<iostream>
 
