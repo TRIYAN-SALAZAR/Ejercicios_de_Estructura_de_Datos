@@ -42,7 +42,6 @@ void SinglyLinkedList::insert_at_the_end(int data) {
 }
 
 void SinglyLinkedList::insert_in_a_position(int data, int value_position_data) {
-
     if(head == nullptr) {
         cout << "Lista vacía. Insertando al inicio." << endl;
         insert_at_the_beggining(data);

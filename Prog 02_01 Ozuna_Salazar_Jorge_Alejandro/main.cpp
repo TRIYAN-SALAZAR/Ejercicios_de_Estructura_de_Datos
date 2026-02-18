@@ -34,7 +34,7 @@ int leer_opcion() {
     int opcion;
     while (true) {
         cout << "Seleccione una opcion: ";
-        if (cin >> opcion && opcion >= 0 && opcion <= 12) {
+        if (cin >> opcion && opcion >= 0 && opcion <= 14) {
             return opcion;
         }
         cout << "Opcion invalida. Intente de nuevo." << endl;
@@ -58,6 +58,7 @@ void mostrar_menu() {
     cout << "11. Ver nodo actual" << endl;
     cout << "12. Vaciar lista" << endl;
     cout << "13. Inicializar Lista" << endl;
+    cout << "14. La lista esta vacia?" << endl;
     cout << "0. Salir" << endl;
 }
 
@@ -109,31 +110,36 @@ int main() {
 
             case 7: {
                 Node* n = lista.first();
-                if (n) cout << "Primero: " << n->data << endl;
+                if (n) 
+                    cout << "Primero: " << n->data << endl;
                 break;
             }
 
             case 8: {
                 Node* n = lista.last();
-                if (n) cout << "Ultimo: " << n->data << endl;
+                if (n) 
+                    cout << "Ultimo: " << n->data << endl;
                 break;
             }
 
             case 9: {
                 Node* n = lista.next_node();
-                if (n) cout << "Siguiente: " << n->data << endl;
+                if (n) 
+                    cout << "Siguiente: " << n->data << endl;
                 break;
             }
 
             case 10: {
                 Node* n = lista.previous_node();
-                if (n) cout << "Anterior: " << n->data << endl;
+                if (n) 
+                    cout << "Anterior: " << n->data << endl;
                 break;
             }
 
             case 11: {
                 Node* n = lista.get_current();
-                if (n) cout << "Actual: " << n->data << endl;
+                if (n) 
+                    cout << "Actual: " << n->data << endl;
                 break;
             }
 
@@ -141,13 +147,22 @@ int main() {
                 lista.delete_all();
                 cout << "Lista vaciada." << endl;
                 break;
+                
             case 13:
                 lista.inicializate();
-                cout << "Lista vaciada eh inicializada" << endl;
+                cout << "Lista vaciada e inicializada" << endl;
+                break;
+                
+            case 14: {
+                bool is_empty = lista.is_empty();
+                cout << (is_empty ? "La lista esta vacia." : "La lista no esta vacia.") << endl;
+                break;
+            }
+            
             case 0:
                 cout << "Saliendo..." << endl;
                 break;
-
+                
             default:
                 cout << "Opcion invalida." << endl;
                 break;
