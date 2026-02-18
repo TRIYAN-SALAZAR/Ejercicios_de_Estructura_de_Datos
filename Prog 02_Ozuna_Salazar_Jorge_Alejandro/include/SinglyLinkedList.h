@@ -15,6 +15,7 @@ class SinglyLinkedList
         SinglyLinkedList(Node*);
         virtual ~SinglyLinkedList();
 
+        void inicializate();
         void insert_at_the_beggining(int);
         void insert_at_the_end(int);
         void insert_in_a_position(int, int);

@@ -12,6 +12,11 @@ SinglyLinkedList::~SinglyLinkedList() {
         delete_all();
 }
 
+void SinglyLinkedList::inicializate() {
+    if(!is_empty())
+        delete_all();
+}
+
 void SinglyLinkedList::insert_at_the_beggining(int data) {
     Node *temp = new Node(data);
     temp->next = head;
