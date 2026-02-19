@@ -3,16 +3,27 @@
 
 #include <Student.h>
 
-class Node
-{
-    public:
-        Student *data;
-        Node *next;
+class Node {
+private:
+    Student *data;
+    Node *next;
 
-        Node();
-        Node(Student* student);
-
-        virtual ~Node();
+public:
+    Node();
+    explicit Node(Student *student);    
+    Node(const Node &other);
+    
+    Node(const Node& other);
+    Node& operator=(const Node& other);
+    virtual ~Node();
+    
+    void setData(Student *student);
+    void setNext(Node *node);
+    
+    Student* getData() const;
+    Node* getNext() const;
+    
+    Student* releaseData();
 };
 
 #endif // NODE_H
