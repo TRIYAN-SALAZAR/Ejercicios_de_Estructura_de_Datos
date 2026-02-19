@@ -55,14 +55,14 @@ Student::~Student() {
     delete last_name;
 }
 
-void Student::set_age(int age) {}
-void Student::set_grade(int grd) {}
-void Student::set_average(float avg) {}
-void Student::set_firstname(std::string f_name) {}
-void Student::set_lastname(std::string l_name) {}
+void Student::set_age(int a) { *age = a; }
+void Student::set_grade(int grd) { *grade = grd; }
+void Student::set_average(float avg) { *average = avg; }
+void Student::set_firstname(std::string f_name) { *first_name = f_name; }
+void Student::set_lastname(std::string l_name) { *last_name = l_name; }
 
-int Student::get_age() const {}
-int Student::get_grade() const {}
-float Student::get_average() const {}
-string Student::get_firstname() const {}
-string Student::get_lastname() const {}
+int Student::get_age() const { return *age; }
+int Student::get_grade() const { return *grade; }
+float Student::get_average() const { return *average; }
+string Student::get_firstname() const { return *first_name; }
+string Student::get_lastname() const { return *last_name; }
