@@ -47,9 +47,12 @@ Student& Student::operator=(const Student& other) {
     return *this;
 }
 
-Student::~Student()
-{
-    
+Student::~Student() {
+    delete age;
+    delete grade;
+    delete average;
+    delete first_name;
+    delete last_name;
 }
 
 void Student::set_age(int age) {}
