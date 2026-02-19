@@ -6,17 +6,21 @@
 class Student
 {
     private:
-        int age;
-        int grade;
-        float average;
-        std::string first_name;
-        std::string last_name;
+        int *age;
+        int *grade;
+        float *average;
+        std::string *first_name;
+        std::string *last_name;
 
     public:
         Student();
         Student(int, std::string, std::string);
         Student(int, int, float, std::string, std::string);
+        
+        Student(const Student& other);
+        Student& operator=(const Student& other);
         ~Student();
+
         void set_age(int);
         void set_grade(int);
         void set_average(float);
