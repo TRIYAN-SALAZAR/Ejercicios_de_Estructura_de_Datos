@@ -28,21 +28,42 @@ Student::Student(int a, int grd, float avg, string f_name, string l_name) {
     last_name = new string(l_name);
 }
 
-Student::Student(const Student& other) {
-    age = new int(*other.age);
-    grade = new int(*other.grade);
-    average = new float(*other.average);
-    first_name = new std::string(*other.first_name);
-    last_name = new std::string(*other.last_name);
+Student::Student(const Student& other)
+    : age(nullptr),
+      grade(nullptr),
+      average(nullptr),
+      first_name(nullptr),
+      last_name(nullptr)
+{
+    if (other.age != nullptr)
+        age = new int(*other.age);
+    
+    if (other.grade != nullptr)
+        grade = new int(*other.grade);
+    
+    if (other.average != nullptr)
+        average = new float(*other.average);
+    
+    if (other.first_name != nullptr)
+        first_name = new std::string(*other.first_name);
+    
+    if (other.last_name != nullptr)
+        last_name = new std::string(*other.last_name);
 }
 
 Student& Student::operator=(const Student& other) {
-    if (this != &other) {
-        *age = *other.age;
-        *grade = *other.grade;
-        *average = *other.average;
-        *first_name = *other.first_name;
-        *last_name = *other.last_name;
+     if (this != &other) {
+        delete age;
+        delete grade;
+        delete average;
+        delete first_name;
+        delete last_name;
+        
+        age = (other.age != nullptr) ? new int(*other.age) : nullptr;
+        grade = (other.grade != nullptr) ? new int(*other.grade) : nullptr;
+        average = (other.average != nullptr) ? new float(*other.average) : nullptr;
+        first_name = (other.first_name != nullptr) ? new std::string(*other.first_name) : nullptr;
+        last_name = (other.last_name != nullptr) ? new std::string(*other.last_name) : nullptr;
     }
     return *this;
 }
