@@ -74,6 +74,12 @@ Student::~Student() {
     delete average;
     delete first_name;
     delete last_name;
+
+    age = nullptr;
+    grade = nullptr;
+    average = nullptr;
+    first_name = nullptr;
+    last_name = nullptr;
 }
 
 void Student::set_age(int a) { *age = a; }
