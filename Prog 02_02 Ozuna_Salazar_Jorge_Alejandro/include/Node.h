@@ -7,7 +7,7 @@ class Node
 {
     public:
         Student *data;
-        Node *Next;
+        Node *next;
 
         Node();
         Node(Student* student);
