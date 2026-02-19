@@ -28,6 +28,25 @@ Student::Student(int a, int grd, float avg, string f_name, string l_name) {
     last_name = new string(l_name);
 }
 
+Student::Student(const Student& other) {
+    age = new int(*other.age);
+    grade = new int(*other.grade);
+    average = new float(*other.average);
+    first_name = new std::string(*other.first_name);
+    last_name = new std::string(*other.last_name);
+}
+
+Student& Student::operator=(const Student& other) {
+    if (this != &other) {
+        *age = *other.age;
+        *grade = *other.grade;
+        *average = *other.average;
+        *first_name = *other.first_name;
+        *last_name = *other.last_name;
+    }
+    return *this;
+}
+
 Student::~Student()
 {
     
