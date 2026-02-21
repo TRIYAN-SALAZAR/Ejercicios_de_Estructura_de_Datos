@@ -477,3 +477,8 @@ void StudentList::reset_current() {
     current_position = head;
     previous = nullptr;
 }
+
+void StudentList::inicializate() {
+    if(!is_empty())
+        delete_all();
+}

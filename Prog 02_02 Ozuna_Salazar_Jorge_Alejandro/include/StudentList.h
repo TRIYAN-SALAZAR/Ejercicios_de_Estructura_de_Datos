@@ -43,6 +43,7 @@ class StudentList {
         Node* previous_node();
         void reset_current();
 
+        void inicializate();
 };
 
 #endif // STUDENTLIST_H
