@@ -133,3 +133,26 @@ void StudentList::insert_at_position(Student* student, int position) {
          << student->get_lastname() << " insertado en posición " 
          << position << endl;
 }
+
+Node* StudentList::search_by_name(const std::string& first_name, 
+                                   const std::string& last_name) {
+    if (head == nullptr) {
+        cout << "Lista vacía" << endl;
+        return nullptr;
+    }
+
+    Node* aux = head;
+    while (aux != nullptr) {
+        Student* student = aux->getData();
+        if (student != nullptr && 
+            student->get_firstname() == first_name && 
+            student->get_lastname() == last_name) {
+            return aux;
+        }
+        aux = aux->getNext();
+    }
+
+    cout << "Estudiante " << first_name << " " << last_name 
+         << " no encontrado" << endl;
+    return nullptr;
+}
