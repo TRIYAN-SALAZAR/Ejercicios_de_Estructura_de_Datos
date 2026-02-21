@@ -41,3 +41,11 @@ void Node::setData(Student *student) {
 void Node::setNext(Node *node) {
     next = node;
 }
+
+Student* Node::getData() const{
+    return data;
+}
+
+Node* Node::getNext() const{
+    return next;
+}
