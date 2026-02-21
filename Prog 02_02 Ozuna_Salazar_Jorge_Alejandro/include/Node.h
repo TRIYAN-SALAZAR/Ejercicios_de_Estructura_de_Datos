@@ -11,7 +11,6 @@ private:
 public:
     Node();
     explicit Node(Student *student);    
-    Node(const Node &other);
     
     Node(const Node& other);
     Node& operator=(const Node& other);
