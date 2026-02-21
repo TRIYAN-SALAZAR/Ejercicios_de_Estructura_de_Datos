@@ -312,3 +312,38 @@ void StudentList::delete_all() {
     previous = nullptr;
     total_nodes = 0;
 }
+
+void StudentList::show_all() const {
+    if (head == nullptr) {
+        cout << "La lista está vacía" << endl;
+        return;
+    }
+
+    Node* aux = head;
+    int index = 1;
+
+    cout << "\n╔════════════════════════════════════════════════════╗" << endl;
+    cout << "║          LISTA DE ESTUDIANTES                      ║" << endl;
+    cout << "╠════════════════════════════════════════════════════╣" << endl;
+
+    while (aux != nullptr) {
+        Student* student = aux->getData();
+        if (student != nullptr) {
+            cout << "║ [" << index << "]" << endl;
+            cout << "║   Nombre: " << student->get_firstname() << " " 
+                 << student->get_lastname() << endl;
+            cout << "║   Edad: " << student->get_age() << endl;
+            cout << "║   Grado: " << student->get_grade() << endl;
+            cout << "║   Promedio: " << student->get_average() << endl;
+            
+            if (aux->getNext() != nullptr) {
+                cout << "╟────────────────────────────────────────────────────╢" << endl;
+            }
+        }
+        aux = aux->getNext();
+        index++;
+    }
+
+    cout << "╚════════════════════════════════════════════════════╝" << endl;
+    cout << "Total de estudiantes: " << total_nodes << endl;
+}
