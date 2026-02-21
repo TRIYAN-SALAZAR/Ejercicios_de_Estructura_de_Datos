@@ -1,7 +1,7 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include <Student.h>
+#include "Student.h"
 
 class Node {
 private:
