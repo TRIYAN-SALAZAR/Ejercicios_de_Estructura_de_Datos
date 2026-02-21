@@ -347,3 +347,41 @@ void StudentList::show_all() const {
     cout << "╚════════════════════════════════════════════════════╝" << endl;
     cout << "Total de estudiantes: " << total_nodes << endl;
 }
+
+void StudentList::show_at_position(int position) const {
+    if (head == nullptr) {
+        cout << "La lista está vacía" << endl;
+        return;
+    }
+
+    if (position < 0 or position > total_nodes) {
+        cout << "Posición inválida" << endl;
+        return;
+    }
+
+    Node* aux = head;
+    int current_pos = 0;
+
+    while (aux != nullptr && current_pos < position) {
+        aux = aux->getNext();
+        current_pos++;
+    }
+
+    if (aux == nullptr) {
+        cout << "Posición " << position << " fuera de rango" << endl;
+        return;
+    }
+
+    Student* student = aux->getData();
+    if (student != nullptr) {
+        cout << "\n╔════════════════════════════════════════════════════╗" << endl;
+        cout << "║ Estudiante en posición " << position << endl;
+        cout << "╠════════════════════════════════════════════════════╣" << endl;
+        cout << "║ Nombre: " << student->get_firstname() << " " 
+             << student->get_lastname() << endl;
+        cout << "║ Edad: " << student->get_age() << endl;
+        cout << "║ Grado: " << student->get_grade() << endl;
+        cout << "║ Promedio: " << student->get_average() << endl;
+        cout << "╚════════════════════════════════════════════════════╝" << endl;
+    }
+}
