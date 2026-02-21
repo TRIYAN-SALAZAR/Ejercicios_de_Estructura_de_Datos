@@ -107,7 +107,7 @@ void StudentList::insert_at_position(Student* student, int position) {
     }
 
     if (position < 0) {
-        cout << "Error: Posición inválida" << endl;
+        cout << "Error: Posicion invalida" << endl;
         return;
     }
 
@@ -130,14 +130,14 @@ void StudentList::insert_at_position(Student* student, int position) {
     total_nodes++;
 
     cout << "Estudiante " << student->get_firstname() << " " 
-         << student->get_lastname() << " insertado en posición " 
+         << student->get_lastname() << " insertado en posicion " 
          << position << endl;
 }
 
 Node* StudentList::search_by_name(const std::string& first_name, 
                                    const std::string& last_name) {
     if (head == nullptr) {
-        cout << "Lista vacía" << endl;
+        cout << "Lista vacia" << endl;
         return nullptr;
     }
 
@@ -159,12 +159,12 @@ Node* StudentList::search_by_name(const std::string& first_name,
 
 Node* StudentList::search_at_position(int position) {
     if (head == nullptr) {
-        cout << "Lista vacía" << endl;
+        cout << "Lista vacia" << endl;
         return nullptr;
     }
 
     if (position < 0) {
-        cout << "Posición inválida" << endl;
+        cout << "Posicion invalida" << endl;
         return nullptr;
     }
 
@@ -177,7 +177,7 @@ Node* StudentList::search_at_position(int position) {
     }
 
     if (aux == nullptr) {
-        cout << "Posición " << position << " fuera de rango" << endl;
+        cout << "Posicion " << position << " fuera de rango" << endl;
         return nullptr;
     }
 
@@ -186,12 +186,12 @@ Node* StudentList::search_at_position(int position) {
 
 bool StudentList::delete_at_position(int position) {
     if (head == nullptr) {
-        cout << "La lista está vacía" << endl;
+        cout << "La lista esta vacia" << endl;
         return false;
     }
 
     if (position < 0) {
-        cout << "Posición inválida" << endl;
+        cout << "Posicion invalida" << endl;
         return false;
     }
 
@@ -210,7 +210,7 @@ bool StudentList::delete_at_position(int position) {
     }
 
     if (aux == nullptr) {
-        cout << "Posición " << position << " fuera de rango" << endl;
+        cout << "Posicion " << position << " fuera de rango" << endl;
         return false;
     }
 
@@ -226,14 +226,14 @@ bool StudentList::delete_at_position(int position) {
     delete aux;
     total_nodes--;
 
-    cout << "Estudiante en posición " << position << " eliminado" << endl;
+    cout << "Estudiante en posicion " << position << " eliminado" << endl;
     return true;
 }
 
 
 bool StudentList::delete_by_name(const std::string& first_name, const std::string& last_name) {
     if (head == nullptr) {
-        cout << "La lista está vacía" << endl;
+        cout << "La lista esta vacia" << endl;
         return false;
     }
 
@@ -279,7 +279,7 @@ bool StudentList::delete_by_name(const std::string& first_name, const std::strin
 
 bool StudentList::delete_first() {
     if (head == nullptr) {
-        cout << "La lista está vacía" << endl;
+        cout << "La lista esta vacia" << endl;
         return false;
     }
 
@@ -315,47 +315,47 @@ void StudentList::delete_all() {
 
 void StudentList::show_all() const {
     if (head == nullptr) {
-        cout << "La lista está vacía" << endl;
+        cout << "La lista esta vacia" << endl;
         return;
     }
 
     Node* aux = head;
     int index = 1;
 
-    cout << "\n╔════════════════════════════════════════════════════╗" << endl;
-    cout << "║          LISTA DE ESTUDIANTES                      ║" << endl;
-    cout << "╠════════════════════════════════════════════════════╣" << endl;
+    cout << "\n+----------------------------------------------------+" << endl;
+    cout << "|          LISTA DE ESTUDIANTES                      |" << endl;
+    cout << "+----------------------------------------------------+" << endl;
 
     while (aux != nullptr) {
         Student* student = aux->getData();
         if (student != nullptr) {
-            cout << "║ [" << index << "]" << endl;
-            cout << "║   Nombre: " << student->get_firstname() << " " 
+            cout << "| [" << index << "]" << endl;
+            cout << "|   Nombre: " << student->get_firstname() << " " 
                  << student->get_lastname() << endl;
-            cout << "║   Edad: " << student->get_age() << endl;
-            cout << "║   Grado: " << student->get_grade() << endl;
-            cout << "║   Promedio: " << student->get_average() << endl;
+            cout << "|   Edad: " << student->get_age() << endl;
+            cout << "|   Grado: " << student->get_grade() << endl;
+            cout << "|   Promedio: " << student->get_average() << endl;
             
             if (aux->getNext() != nullptr) {
-                cout << "╟────────────────────────────────────────────────────╢" << endl;
+                cout << "+----------------------------------------------------+" << endl;
             }
         }
         aux = aux->getNext();
         index++;
     }
 
-    cout << "╚════════════════════════════════════════════════════╝" << endl;
+    cout << "+----------------------------------------------------+" << endl;
     cout << "Total de estudiantes: " << total_nodes << endl;
 }
 
 void StudentList::show_at_position(int position) const {
     if (head == nullptr) {
-        cout << "La lista está vacía" << endl;
+        cout << "La lista esta vacia" << endl;
         return;
     }
 
     if (position < 0 or position > total_nodes) {
-        cout << "Posición inválida" << endl;
+        cout << "Posicion invalida" << endl;
         return;
     }
 
@@ -368,21 +368,21 @@ void StudentList::show_at_position(int position) const {
     }
 
     if (aux == nullptr) {
-        cout << "Posición " << position << " fuera de rango" << endl;
+        cout << "Posicion " << position << " fuera de rango" << endl;
         return;
     }
 
     Student* student = aux->getData();
     if (student != nullptr) {
-        cout << "\n╔════════════════════════════════════════════════════╗" << endl;
-        cout << "║ Estudiante en posición " << position << endl;
-        cout << "╠════════════════════════════════════════════════════╣" << endl;
-        cout << "║ Nombre: " << student->get_firstname() << " " 
+        cout << "\n+----------------------------------------------------+" << endl;
+        cout << "| Estudiante en posicion " << position << endl;
+        cout << "+----------------------------------------------------+" << endl;
+        cout << "| Nombre: " << student->get_firstname() << " " 
              << student->get_lastname() << endl;
-        cout << "║ Edad: " << student->get_age() << endl;
-        cout << "║ Grado: " << student->get_grade() << endl;
-        cout << "║ Promedio: " << student->get_average() << endl;
-        cout << "╚════════════════════════════════════════════════════╝" << endl;
+        cout << "| Edad: " << student->get_age() << endl;
+        cout << "| Grado: " << student->get_grade() << endl;
+        cout << "| Promedio: " << student->get_average() << endl;
+        cout << "+----------------------------------------------------+" << endl;
     }
 }
 
@@ -406,7 +406,7 @@ Node* StudentList::first() {
 
 Node* StudentList::last() {
     if (head == nullptr) {
-        cout << "Lista vacía" << endl;
+        cout << "Lista vacia" << endl;
         return nullptr;
     }
 
@@ -424,7 +424,7 @@ Node* StudentList::last() {
 
 Node* StudentList::get_current() {
     if (current_position == nullptr) {
-        cout << "Posición actual no definida" << endl;
+        cout << "Posicion actual no definida" << endl;
         return nullptr;
     }
 
@@ -433,12 +433,12 @@ Node* StudentList::get_current() {
 
 Node* StudentList::next_node() {
     if (current_position == nullptr) {
-        cout << "Posición actual no definida. Use first() o last()" << endl;
+        cout << "Posicion actual no definida. Use first() o last()" << endl;
         return nullptr;
     }
 
     if (current_position->getNext() == nullptr) {
-        cout << "Ya está en el último nodo" << endl;
+        cout << "Ya esta en el ultimo nodo" << endl;
         return nullptr;
     }
 
@@ -449,12 +449,12 @@ Node* StudentList::next_node() {
 
 Node* StudentList::previous_node() {
     if (current_position == nullptr) {
-        cout << "Posición actual no definida. Use first() o last()" << endl;
+        cout << "Posicion actual no definida. Use first() o last()" << endl;
         return nullptr;
     }
 
     if (current_position == head) {
-        cout << "Ya está en el primer nodo" << endl;
+        cout << "Ya esta en el primer nodo" << endl;
         return nullptr;
     }
 
