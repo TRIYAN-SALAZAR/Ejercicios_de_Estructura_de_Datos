@@ -77,3 +77,25 @@ void StudentList::insert_at_the_beginning(Student* student) {
     head = temp;
     total_nodes++;
 }
+
+
+void StudentList::insert_at_the_end(Student* student) {
+    if (student == nullptr) {
+        cout << "Error: No se puede insertar un estudiante nulo" << endl;
+        return;
+    }
+
+    Node* temp = new Node(student);
+
+    if (head == nullptr) {
+        head = temp;
+    } else {
+        Node* aux = head;
+        while (aux->getNext() != nullptr) {
+            aux = aux->getNext();
+        }
+        aux->setNext(temp);
+    }
+
+    total_nodes++;
+}
