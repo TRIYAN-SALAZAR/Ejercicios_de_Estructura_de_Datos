@@ -99,3 +99,37 @@ void StudentList::insert_at_the_end(Student* student) {
 
     total_nodes++;
 }
+
+void StudentList::insert_at_position(Student* student, int position) {
+    if (student == nullptr) {
+        cout << "Error: No se puede insertar un estudiante nulo" << endl;
+        return;
+    }
+
+    if (position < 0) {
+        cout << "Error: Posición inválida" << endl;
+        return;
+    }
+
+    if (position == 0 || head == nullptr) {
+        insert_at_the_beginning(student);
+        return;
+    }
+
+    Node* aux = head;
+    int current_pos = 0;
+
+    while (aux->getNext() != nullptr && current_pos < position - 1) {
+        aux = aux->getNext();
+        current_pos++;
+    }
+
+    Node* temp = new Node(student);
+    temp->setNext(aux->getNext());
+    aux->setNext(temp);
+    total_nodes++;
+
+    cout << "Estudiante " << student->get_firstname() << " " 
+         << student->get_lastname() << " insertado en posición " 
+         << position << endl;
+}
