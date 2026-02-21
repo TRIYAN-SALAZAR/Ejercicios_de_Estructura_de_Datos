@@ -421,3 +421,12 @@ Node* StudentList::last() {
     current_position = aux;
     return current_position;
 }
+
+Node* StudentList::get_current() {
+    if (current_position == nullptr) {
+        cout << "Posición actual no definida" << endl;
+        return nullptr;
+    }
+
+    return current_position;
+}
