@@ -472,3 +472,8 @@ Node* StudentList::previous_node() {
 
     return current_position;
 }
+
+void StudentList::reset_current() {
+    current_position = head;
+    previous = nullptr;
+}
