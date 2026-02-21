@@ -33,3 +33,11 @@ Node& Node::operator=(const Node &other) {
 
     return *this;
 }
+
+void Node::setData(Student *student) {
+    data = student;
+}
+
+void Node::setNext(Node *node) {
+    next = node;
+}
