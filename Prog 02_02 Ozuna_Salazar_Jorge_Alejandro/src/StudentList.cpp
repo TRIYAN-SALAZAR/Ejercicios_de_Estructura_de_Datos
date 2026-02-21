@@ -183,3 +183,49 @@ Node* StudentList::search_at_position(int position) {
 
     return aux;
 }
+
+bool StudentList::delete_at_position(int position) {
+    if (head == nullptr) {
+        cout << "La lista está vacía" << endl;
+        return false;
+    }
+
+    if (position < 0) {
+        cout << "Posición inválida" << endl;
+        return false;
+    }
+
+    if (position == 0) {
+        return delete_first();
+    }
+
+    Node* aux = head;
+    Node* aux_previous = nullptr;
+    int current_pos = 0;
+
+    while (aux != nullptr && current_pos < position) {
+        aux_previous = aux;
+        aux = aux->getNext();
+        current_pos++;
+    }
+
+    if (aux == nullptr) {
+        cout << "Posición " << position << " fuera de rango" << endl;
+        return false;
+    }
+
+    // Actualizar punteros de navegación si es necesario
+    if (aux == current_position) {
+        current_position = nullptr;
+        previous = nullptr;
+    } else if (aux == previous) {
+        previous = nullptr;
+    }
+
+    aux_previous->setNext(aux->getNext());
+    delete aux;
+    total_nodes--;
+
+    cout << "Estudiante en posición " << position << " eliminado" << endl;
+    return true;
+}
