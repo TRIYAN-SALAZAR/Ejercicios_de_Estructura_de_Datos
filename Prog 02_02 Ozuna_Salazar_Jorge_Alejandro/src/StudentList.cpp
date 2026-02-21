@@ -393,3 +393,13 @@ bool StudentList::is_empty() const {
 int StudentList::size() const {
     return total_nodes;
 }
+
+Node* StudentList::first() {
+    if (head == nullptr) {
+        return nullptr;
+    }
+
+    current_position = head;
+    previous = nullptr;
+    return current_position;
+}
