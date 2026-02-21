@@ -156,3 +156,30 @@ Node* StudentList::search_by_name(const std::string& first_name,
          << " no encontrado" << endl;
     return nullptr;
 }
+
+Node* StudentList::search_at_position(int position) {
+    if (head == nullptr) {
+        cout << "Lista vacía" << endl;
+        return nullptr;
+    }
+
+    if (position < 0) {
+        cout << "Posición inválida" << endl;
+        return nullptr;
+    }
+
+    Node* aux = head;
+    int current_pos = 0;
+
+    while (aux != nullptr && current_pos < position) {
+        aux = aux->getNext();
+        current_pos++;
+    }
+
+    if (aux == nullptr) {
+        cout << "Posición " << position << " fuera de rango" << endl;
+        return nullptr;
+    }
+
+    return aux;
+}
