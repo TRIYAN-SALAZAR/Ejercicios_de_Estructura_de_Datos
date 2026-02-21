@@ -13,9 +13,9 @@ Node::Node(const Node &other) : next(nullptr) {
     }
 }
 
-Node::~Node()
-{
-
+Node::~Node() {
+    delete data;
+    data = nullptr;
 }
 
 Node& Node::operator=(const Node &other) {
