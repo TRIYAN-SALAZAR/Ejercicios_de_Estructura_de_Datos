@@ -22,14 +22,8 @@ class StudentList {
         void insert_at_the_end(Student*);
         void insert_at_position(Student*, int);
         
-        void insert_at_the_beginning(int, int, float, const std::string&, const std::string&);
-        void insert_at_the_end(int , int, float, const std::string&, const std::string&);
-
         Node* search_by_name(const std::string&, const std::string&);
-        Node* search_by_age(int);
-        Node* search_by_grade(int);
         Node* search_at_position(int);
-        bool contains(const std::string&, const std::string&);
 
         bool delete_at_position(int);
         bool delete_by_name(const std::string&, const std::string&);
@@ -38,7 +32,6 @@ class StudentList {
 
         void show_all() const;
         void show_at_position(int) const;
-        void show_reverse() const;
 
         bool is_empty() const;
         int size() const;
