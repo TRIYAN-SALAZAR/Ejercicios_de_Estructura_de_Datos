@@ -229,3 +229,50 @@ bool StudentList::delete_at_position(int position) {
     cout << "Estudiante en posición " << position << " eliminado" << endl;
     return true;
 }
+
+
+bool StudentList::delete_by_name(const std::string& first_name, const std::string& last_name) {
+    if (head == nullptr) {
+        cout << "La lista está vacía" << endl;
+        return false;
+    }
+
+    Node* aux = head;
+    Node* aux_previous = nullptr;
+
+    while (aux != nullptr) {
+        Student* student = aux->getData();
+        if (student != nullptr && 
+            student->get_firstname() == first_name && 
+            student->get_lastname() == last_name) {
+            break;
+        }
+        aux_previous = aux;
+        aux = aux->getNext();
+    }
+
+    if (aux == nullptr) {
+        cout << "Estudiante " << first_name << " " << last_name << " no encontrado" << endl;
+        return false;
+    }
+
+    // Actualizar punteros de navegación si es necesario
+    if (aux == current_position) {
+        current_position = nullptr;
+        previous = nullptr;
+    } else if (aux == previous) {
+        previous = nullptr;
+    }
+
+    if (aux == head) {
+        head = head->getNext();
+    } else {
+        aux_previous->setNext(aux->getNext());
+    }
+
+    delete aux;
+    total_nodes--;
+
+    cout << "Estudiante " << first_name << " " << last_name << " eliminado" << endl;
+    return true;
+}
