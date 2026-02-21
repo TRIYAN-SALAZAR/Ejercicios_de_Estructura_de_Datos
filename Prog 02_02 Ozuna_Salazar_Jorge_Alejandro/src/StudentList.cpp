@@ -276,3 +276,23 @@ bool StudentList::delete_by_name(const std::string& first_name, const std::strin
     cout << "Estudiante " << first_name << " " << last_name << " eliminado" << endl;
     return true;
 }
+
+bool StudentList::delete_first() {
+    if (head == nullptr) {
+        cout << "La lista está vacía" << endl;
+        return false;
+    }
+
+    Node* temp = head;
+    head = head->getNext();
+
+    if (temp == current_position) {
+        current_position = head;
+        previous = nullptr;
+    }
+
+    delete temp;
+    total_nodes--;
+
+    return true;
+}
