@@ -1,5 +1,10 @@
 #include "StudentList.h"
 
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
 StudentList::StudentList() : head(nullptr), current_position(nullptr), previous(nullptr), total_nodes(0) {}
 
 StudentList::StudentList(Student* student) : head(nullptr), current_position(nullptr), previous(nullptr), total_nodes(0) {
@@ -56,8 +61,19 @@ StudentList& StudentList::operator=(const StudentList& other) {
     return *this;
 }
 
-
 StudentList::~StudentList() {
     if(!is_empty()) 
         delete_all();
+}
+
+void StudentList::insert_at_the_beginning(Student* student) {
+    if (student == nullptr) {
+        cout << "Error: No se puede insertar un estudiante nulo" << endl;
+        return;
+    }
+
+    Node* temp = new Node(student);
+    temp->setNext(head);
+    head = temp;
+    total_nodes++;
 }
