@@ -385,3 +385,11 @@ void StudentList::show_at_position(int position) const {
         cout << "╚════════════════════════════════════════════════════╝" << endl;
     }
 }
+
+bool StudentList::is_empty() const {
+    return head == nullptr;
+}
+
+int StudentList::size() const {
+    return total_nodes;
+}
