@@ -403,3 +403,21 @@ Node* StudentList::first() {
     previous = nullptr;
     return current_position;
 }
+
+Node* StudentList::last() {
+    if (head == nullptr) {
+        cout << "Lista vacía" << endl;
+        return nullptr;
+    }
+
+    Node* aux = head;
+    previous = nullptr;
+
+    while (aux->getNext() != nullptr) {
+        previous = aux;
+        aux = aux->getNext();
+    }
+
+    current_position = aux;
+    return current_position;
+}
