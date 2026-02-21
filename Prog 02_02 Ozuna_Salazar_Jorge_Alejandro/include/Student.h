@@ -32,6 +32,8 @@ class Student
         float get_average() const;
         std::string get_firstname() const;
         std::string get_lastname() const;
+
+        void display() const;
 };
 
 #endif // STUDENT_H

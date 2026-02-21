@@ -93,3 +93,11 @@ int Student::get_grade() const { return *grade; }
 float Student::get_average() const { return *average; }
 string Student::get_firstname() const { return *first_name; }
 string Student::get_lastname() const { return *last_name; }
+
+void Student::display() const
+{
+    std::cout << "Nombre: " << get_firstname() << " " << get_lastname() << "\n"
+              << "Edad: " << get_age() << "\n"
+              << "Grado: " << get_grade() << "\n"
+              << "Promedio: " << get_average() << std::endl;
+}
