@@ -430,3 +430,19 @@ Node* StudentList::get_current() {
 
     return current_position;
 }
+
+Node* StudentList::next_node() {
+    if (current_position == nullptr) {
+        cout << "Posición actual no definida. Use first() o last()" << endl;
+        return nullptr;
+    }
+
+    if (current_position->getNext() == nullptr) {
+        cout << "Ya está en el último nodo" << endl;
+        return nullptr;
+    }
+
+    previous = current_position;
+    current_position = current_position->getNext();
+    return current_position;
+}
