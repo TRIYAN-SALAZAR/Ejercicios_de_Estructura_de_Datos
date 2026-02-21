@@ -17,7 +17,6 @@ Student::Student(int a, string f_name, string l_name) {
     average = new float(0.0f);
     first_name = new string(f_name);
     last_name = new string(l_name);
-
 }
 
 Student::Student(int a, int grd, float avg, string f_name, string l_name) {
