@@ -49,3 +49,9 @@ Student* Node::getData() const{
 Node* Node::getNext() const{
     return next;
 }
+
+Student* Node::releaseData() {
+    Student *temp = data;
+    data = nullptr;
+    return temp;
+}
