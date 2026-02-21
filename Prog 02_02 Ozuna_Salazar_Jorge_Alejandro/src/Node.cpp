@@ -17,3 +17,19 @@ Node::~Node()
 {
 
 }
+
+Node& Node::operator=(const Node &other) {
+    if(this != &other) {
+        delete data;
+        
+        if(other.data != nullptr) {
+            data = new Student(*other.data);
+        } else {
+            data = nullptr;
+        }
+
+        next = nullptr;
+    }
+
+    return *this;
+}
