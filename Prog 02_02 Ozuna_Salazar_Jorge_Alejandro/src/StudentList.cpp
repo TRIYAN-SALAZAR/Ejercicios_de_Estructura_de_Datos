@@ -446,3 +446,29 @@ Node* StudentList::next_node() {
     current_position = current_position->getNext();
     return current_position;
 }
+
+Node* StudentList::previous_node() {
+    if (current_position == nullptr) {
+        cout << "Posición actual no definida. Use first() o last()" << endl;
+        return nullptr;
+    }
+
+    if (current_position == head) {
+        cout << "Ya está en el primer nodo" << endl;
+        return nullptr;
+    }
+
+    current_position = previous;
+
+    if (current_position == head) {
+        previous = nullptr;
+    } else {
+        Node* aux = head;
+        while (aux != nullptr && aux->getNext() != current_position) {
+            aux = aux->getNext();
+        }
+        previous = aux;
+    }
+
+    return current_position;
+}
