@@ -1,14 +1,30 @@
 # depslib dependency file v1.0
-1740933562 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\main.cpp
+1771649752 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\main.cpp
+	"StudentList.h"
+	"Student.h"
+	<iostream>
+	<limits>
+	<string>
+
+1771644944 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\src\node.cpp
+	"Node.h"
+	"Student.h"
+
+1771651062 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\include\node.h
+	"Student.h"
+
+1771649247 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\src\studentlist.cpp
+	"StudentList.h"
 	<iostream>
 
-1771443044 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\src\node.cpp
+1771649244 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\include\studentlist.h
 	"Node.h"
+	"Student.h"
 
-1771451417 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\include\node.h
+1771649681 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\src\student.cpp
+	"Student.h"
+	<iostream>
 
-1771443125 source:c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\src\studentlist.cpp
-	"StudentList.h"
-
-1771443125 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\include\studentlist.h
+1771649619 c:\users\triya\documents\cucei\4to semestre\estructura de dartos\prog 02_02 ozuna_salazar_jorge_alejandro\include\student.h
+	<iostream>
 
