@@ -296,3 +296,19 @@ bool StudentList::delete_first() {
 
     return true;
 }
+
+void StudentList::delete_all() {
+    Node* aux = head;
+    Node* temp;
+
+    while (aux != nullptr) {
+        temp = aux->getNext();
+        delete aux;
+        aux = temp;
+    }
+
+    head = nullptr;
+    current_position = nullptr;
+    previous = nullptr;
+    total_nodes = 0;
+}
