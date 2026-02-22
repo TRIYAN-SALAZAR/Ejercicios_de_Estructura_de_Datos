@@ -7,21 +7,24 @@ class Node {
 private:
     Student *data;
     Node *next;
+    Node *prev;
 
 public:
     Node();
-    explicit Node(Student *student);    
-    
+    explicit Node(Student *student);
+
     Node(const Node& other);
     Node& operator=(const Node& other);
     virtual ~Node();
-    
+
     void setData(Student *student);
     void setNext(Node *node);
-    
+    void setPrev(Node *node);
+
     Student* getData() const;
     Node* getNext() const;
-    
+    Node* getPrev() const;
+
     Student* releaseData();
 };
 
