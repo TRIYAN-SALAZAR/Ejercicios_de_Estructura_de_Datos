@@ -7,13 +7,13 @@
 class StudentList {
     private:
         Node *head;
+        Node *tail;
         Node *current_position;
-        Node *previous;
         int total_nodes;
 
     public:
         StudentList();
-        StudentList(Student*); 
+        StudentList(Student*);
         StudentList(const StudentList& other);
         StudentList& operator=(const StudentList& other);
         virtual ~StudentList();
@@ -21,7 +21,7 @@ class StudentList {
         void insert_at_the_beginning(Student*);
         void insert_at_the_end(Student*);
         void insert_at_position(Student*, int);
-        
+
         Node* search_by_name(const std::string&, const std::string&);
         Node* search_at_position(int);
 
@@ -35,7 +35,7 @@ class StudentList {
 
         bool is_empty() const;
         int size() const;
-        
+
         Node* first();
         Node* last();
         Node* get_current();
