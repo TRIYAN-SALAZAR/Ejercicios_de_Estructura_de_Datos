@@ -1,5 +1,4 @@
 #include "StudentList.h"
-
 #include <iostream>
 
 using std::cout;
