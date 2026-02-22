@@ -1,11 +1,11 @@
 #include "Node.h"
 #include "Student.h"
 
-Node::Node() : data(nullptr), next(nullptr) {}
+Node::Node() : data(nullptr), next(nullptr), prev(nullptr) {}
 
-Node::Node(Student* stdnt) : data(stdnt), next(nullptr) {}
+Node::Node(Student* stdnt) : data(stdnt), next(nullptr), prev(nullptr) {}
 
-Node::Node(const Node &other) : next(nullptr) {
+Node::Node(const Node &other) : next(nullptr), prev(nullptr) {
     if(other.data != nullptr) {
         data = new Student(*other.data);
     } else {
@@ -21,7 +21,7 @@ Node::~Node() {
 Node& Node::operator=(const Node &other) {
     if(this != &other) {
         delete data;
-        
+
         if(other.data != nullptr) {
             data = new Student(*other.data);
         } else {
@@ -29,6 +29,7 @@ Node& Node::operator=(const Node &other) {
         }
 
         next = nullptr;
+        prev = nullptr;
     }
 
     return *this;
@@ -42,12 +43,20 @@ void Node::setNext(Node *node) {
     next = node;
 }
 
-Student* Node::getData() const{
+void Node::setPrev(Node *node) {
+    prev = node;
+}
+
+Student* Node::getData() const {
     return data;
 }
 
-Node* Node::getNext() const{
+Node* Node::getNext() const {
     return next;
+}
+
+Node* Node::getPrev() const {
+    return prev;
 }
 
 Student* Node::releaseData() {
